@@ -5,10 +5,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 This repository contains the following files:
 
-1. CodeBook - describes the contents of the data set
-2. README.md - overview of this project.
+1. CodeBook - describes the variables, the data, and any transformations or work that you performed to clean up the data 
+2. README.md - explains how all of the scripts work and how they are connected.
 3. run_analysis.R - the R script that generate the result data set.
-4. tidy_data.txt - text file contains the result data set after cleaning.
+4. tidy_data.txt - text file contains the tidy data set after cleaning.
 
 run_analysis.R script performs the following:
 1.	Merges the training and the test sets to create one data set.
