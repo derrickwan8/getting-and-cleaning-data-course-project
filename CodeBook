@@ -1,0 +1,48 @@
+This document describes the variables, the data, and any transformations or work that you performed to clean up the data
+
+Steps:
+1. Download the file with the file url (variable: url) and unzip it. 
+2. Merges the training and the test sets to create one data set.
+   i. Read the files below into tables into respective variables: 
+      a. x_train.txt -> x_train
+      b. y_train.txt -> y_train
+      c. subject_train.txt -> s_train
+      d. x_test.txt -> x_test
+      e. y_test.txt -> y_test
+      f. subject_test.txt -> s_test
+      g. features.txt -> features
+      h. activity_labels.txt -> activities
+   ii. Merge the datasets as below:
+      a. s_train, s_test -> s_data
+      b. y_train, y_test -> y_data
+      c. x_train, x_test -> x_data
+   iii. rename columns for all data sets
+      a. s_data <- subject
+      b. y_data <- activity
+      c. x_data <- get column names from features data set
+      d. activities <- activity, activityName
+2.	Extracts only the measurements on the mean and 
+    standard deviation for each measurement.
+  i. Get variables for mean and std
+  ii. Extract columns for mean and std
+3. Uses descriptive activity names to name the activities in the data set
+  i. Merge all datasets
+  ii. Replace activity id with activity names
+4. Appropriately labels the data set with descriptive variable names.
+  i. Get all column names
+  ii. Find and replace short words with descriptive words:
+      a. Find and replace '()' and '-' to empty string
+      b. Find and replace 'mean' to 'Mean'
+      c. Find and replace 'std' to 'StandardDeviation'
+      d. Find and replace 'Acc' to 'Accelerometer'
+      e. Find and replace 'Gyro' to 'Gyroscope'
+      f. Find and replace 'Mag' to 'Magnitude'
+      g. Find and replace 'BodyBody' to 'Body'
+      h. Find and replace first 't' to 'Time'
+      g. Find and replace first 'f' to 'Frequency'
+  iii. Rename columns 
+5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  i. Group by and summarize data
+  ii. output to file 'tidy_data.txt'
+  
+  
